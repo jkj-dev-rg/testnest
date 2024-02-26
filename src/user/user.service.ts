@@ -4,8 +4,12 @@ import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UserService {
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
+  create(createUserDto: CreateUserDto, query: any, params: any) {
+    const products = [];
+
+    console.log(query, params);
+    products.push(params);
+    return products;
   }
 
   findAll() {
